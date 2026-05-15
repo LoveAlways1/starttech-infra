@@ -1,0 +1,10 @@
+# Latest backend logs
+fields @timestamp, @message
+| sort @timestamp desc
+| limit 50
+
+# Backend errors
+fields @timestamp, @message
+| filter @message like /error/ or @message like /ERROR/
+| sort @timestamp desc
+| limit 50

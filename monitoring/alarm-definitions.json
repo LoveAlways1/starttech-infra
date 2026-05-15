@@ -1,0 +1,20 @@
+{
+  "alarms": [
+    {
+      "name": "starttech-backend-high-cpu",
+      "service": "EC2",
+      "metric": "CPUUtilization",
+      "threshold": 80,
+      "period": 300,
+      "comparison": "GreaterThanThreshold"
+    },
+    {
+      "name": "starttech-alb-unhealthy-hosts",
+      "service": "Application Load Balancer",
+      "metric": "UnHealthyHostCount",
+      "threshold": 1,
+      "period": 60,
+      "comparison": "GreaterThanOrEqualToThreshold"
+    }
+  ]
+}
